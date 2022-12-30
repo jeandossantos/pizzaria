@@ -1,0 +1,7 @@
+{
+  "cSpell.words": ["whatsapp"],
+  "code-runner.executorMap": {
+    "javascript": "node",
+    "typescript": "node_modules/ts-node"
+  }
+}
