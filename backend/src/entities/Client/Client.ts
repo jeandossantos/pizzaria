@@ -8,7 +8,7 @@ import {
   Length,
   ValidateNested,
 } from 'class-validator';
-import { Address } from '../Address';
+import { Address } from '../Address/Address';
 
 export class Client {
   @IsOptional()

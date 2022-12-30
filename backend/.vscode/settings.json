@@ -1,5 +1,5 @@
 {
-  "cSpell.words": ["whatsapp"],
+  "cSpell.words": ["Itaípu", "whatsapp"],
   "code-runner.executorMap": {
     "javascript": "node",
     "typescript": "node_modules/.bin/ts-node"
