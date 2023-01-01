@@ -9,6 +9,20 @@ import {
 export class ClientRepositoryInMemory implements IClientRepository {
   items: Client[] = [];
 
+  async findById(clientId: string): Promise<boolean | Client> {
+    return this.items.find((client) => client.id === clientId) || false;
+  }
+
+  async remove(clientId: string): Promise<boolean> {
+    const client = this.items.find((client) => client.id === clientId);
+
+    if (!client) return false;
+
+    this.items = this.items.filter((client) => client.id !== clientId);
+
+    return true;
+  }
+
   async findAll(props: findAllProps): Promise<FindAllReturn> {
     return {
       count: this.items.length,
