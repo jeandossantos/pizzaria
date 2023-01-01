@@ -3,10 +3,13 @@ import { Client } from '../entities/Client/Client';
 import { IClientRepository } from '../interfaces/IClientRepository';
 
 export class ClientRepositoryInMemory implements IClientRepository {
-  async findByWhatsapp(props: { whatsapp: string }): Promise<Client> {
-    throw new Error('Method not implemented.');
-  }
   items: Client[] = [];
+
+  async findByWhatsapp(whatsapp: string): Promise<Client | boolean> {
+    const client = this.items.find((c) => c.whatsapp === whatsapp);
+
+    return client ? client : false;
+  }
 
   async create(client: Client): Promise<Client> {
     client.id = randomUUID();
