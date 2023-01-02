@@ -1,11 +1,13 @@
 import { Flavor } from '../entities/Flavor/Flavor';
 
 export interface FindAllReturn {
-  flavours: Flavor[];
+  flavors: Flavor[];
   count: number;
   limit: number;
 }
 
 export interface IFlavorRepository {
   create: (flavor: Flavor) => Promise<Flavor>;
+  update: (flavor: Flavor) => Promise<Flavor>;
+  findAll(): Promise<FindAllReturn>;
 }
