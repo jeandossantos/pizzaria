@@ -1,8 +1,15 @@
-import { IsNotEmpty, IsUUID, IsInt } from 'class-validator';
+import {
+  IsNotEmpty,
+  IsUUID,
+  IsInt,
+  IsOptional,
+  IsNumber,
+} from 'class-validator';
 
 type SizeType = 'pequena' | 'media' | 'grande';
 
 export class Flavor {
+  @IsOptional()
   @IsUUID()
   id: string;
 
@@ -12,7 +19,9 @@ export class Flavor {
   @IsNotEmpty()
   size: SizeType;
 
-  @IsInt()
+  @IsNumber({
+    maxDecimalPlaces: 2,
+  })
   price: number;
 
   constructor(props: Omit<Flavor, 'id'> & { id?: string }) {
