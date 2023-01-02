@@ -1,3 +1,4 @@
+import { ClassValidadorError } from './exceptions/ClassValidadorError';
 import 'express-async-errors';
 
 import express, { NextFunction, Request, Response } from 'express';
@@ -22,6 +23,10 @@ app.use(
         message: error.message,
         code: error.code,
       });
+    }
+
+    if (error instanceof ClassValidadorError) {
+      return res.status(error.code).json(error.getErrors());
     }
 
     console.error(error.message || error);
