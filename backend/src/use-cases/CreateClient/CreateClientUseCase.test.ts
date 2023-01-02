@@ -22,4 +22,21 @@ describe('create a Client', () => {
 
     expect(client).toHaveProperty('id');
   });
+
+  it('should not create a new Client', async () => {
+    const createClientUseCase = new CreateClientUseCase(clientRepository);
+
+    const result = createClientUseCase.execute({
+      name: 'c',
+      whatsapp: '12345678',
+      address: {
+        neighborhood: '',
+        street: 'street',
+        number: 100,
+        complement: 'some complement',
+      },
+    });
+
+    expect(result).rejects.toThrow();
+  });
 });
