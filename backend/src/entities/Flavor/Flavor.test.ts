@@ -53,8 +53,8 @@ describe('Create Flavor', () => {
 
     const errors = await validate(flavor);
 
-    expect(errors[0].constraints?.isInt).toBe(
-      'price must be an integer number'
+    expect(errors[0].constraints?.isNumber).toBe(
+      'price must be a number conforming to the specified constraints'
     );
   });
 
