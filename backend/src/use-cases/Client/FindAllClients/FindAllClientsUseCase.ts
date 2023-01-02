@@ -1,4 +1,4 @@
-import { IClientRepository } from './../../interfaces/IClientRepository';
+import { IClientRepository } from './../../../interfaces/IClientRepository';
 
 interface FindAllClientsUseCaseProps {
   page: number;

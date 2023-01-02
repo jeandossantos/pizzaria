@@ -1,10 +1,10 @@
 import { FindClientByWhatsappUseCase } from './FindClientByWhatsappUseCase';
-import { Client } from './../../entities/Client/Client';
+import { Client } from '../../../entities/Client/Client';
 import { describe, expect, it } from '@jest/globals';
 
-import { ClientRepositoryInMemory } from '../../in-memory-database/ClientRepositoryInMemory';
-import { Address } from '../../entities/Address/Address';
-import { CustomException } from '../../exceptions/CustomException';
+import { ClientRepositoryInMemory } from '../../../in-memory-database/ClientRepositoryInMemory';
+import { Address } from '../../../entities/Address/Address';
+import { CustomException } from '../../../exceptions/CustomException';
 
 const clientRepository = new ClientRepositoryInMemory();
 

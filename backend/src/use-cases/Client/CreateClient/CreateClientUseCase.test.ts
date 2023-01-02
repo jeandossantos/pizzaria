@@ -1,7 +1,7 @@
 import { describe, expect, it } from '@jest/globals';
 
 import { CreateClientUseCase } from './CreateClientUseCase';
-import { ClientRepositoryInMemory } from '../../in-memory-database/ClientRepositoryInMemory';
+import { ClientRepositoryInMemory } from '../../../in-memory-database/ClientRepositoryInMemory';
 
 const clientRepository = new ClientRepositoryInMemory();
 

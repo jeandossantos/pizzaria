@@ -1,7 +1,7 @@
-import { Flavor } from '../../entities/Flavor/Flavor';
+import { Flavor } from '../../../entities/Flavor/Flavor';
 import { describe, expect, it } from '@jest/globals';
 
-import { FlavorRepositoryInMemory } from '../../in-memory-database/FlavorRepositoryInMemory';
+import { FlavorRepositoryInMemory } from '../../../in-memory-database/FlavorRepositoryInMemory';
 import { UpdateFlavorUseCase } from './UpdateFlavorUseCase';
 
 const flavorRepository = new FlavorRepositoryInMemory();

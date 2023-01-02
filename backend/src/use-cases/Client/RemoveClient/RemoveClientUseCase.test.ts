@@ -1,10 +1,10 @@
 import { RemoveClientUseCase } from './RemoveClientUseCase';
 import { describe, expect, it } from '@jest/globals';
 
-import { ClientRepositoryInMemory } from '../../in-memory-database/ClientRepositoryInMemory';
-import { Client } from '../../entities/Client/Client';
-import { Address } from '../../entities/Address/Address';
-import { CustomException } from '../../exceptions/CustomException';
+import { ClientRepositoryInMemory } from '../../../in-memory-database/ClientRepositoryInMemory';
+import { Client } from '../../../entities/Client/Client';
+import { Address } from '../../../entities/Address/Address';
+import { CustomException } from '../../../exceptions/CustomException';
 
 const clientRepository = new ClientRepositoryInMemory();
 

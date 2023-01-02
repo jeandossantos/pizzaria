@@ -1,8 +1,8 @@
-import { ClassValidadorError } from './../../exceptions/ClassValidadorError';
+import { ClassValidadorError } from '../../../exceptions/ClassValidadorError';
 import { validate } from 'class-validator';
-import { Address } from '../../entities/Address/Address';
-import { Client } from '../../entities/Client/Client';
-import { IClientRepository } from '../../interfaces/IClientRepository';
+import { Address } from '../../../entities/Address/Address';
+import { Client } from '../../../entities/Client/Client';
+import { IClientRepository } from '../../../interfaces/IClientRepository';
 
 type CreateClientUseCaseProps = Omit<Client, 'id'>;
 

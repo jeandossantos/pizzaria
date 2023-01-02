@@ -1,5 +1,5 @@
-import { CustomException } from '../../exceptions/CustomException';
-import { IClientRepository } from '../../interfaces/IClientRepository';
+import { CustomException } from '../../../exceptions/CustomException';
+import { IClientRepository } from '../../../interfaces/IClientRepository';
 
 interface FindClientByWhatsappUseCaseProps {
   whatsapp: string;

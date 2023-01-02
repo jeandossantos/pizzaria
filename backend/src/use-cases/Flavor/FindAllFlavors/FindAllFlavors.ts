@@ -1,4 +1,4 @@
-import { IFlavorRepository } from '../../interfaces/IFlavorRepository';
+import { IFlavorRepository } from '../../../interfaces/IFlavorRepository';
 
 export class FindAllFlavors {
   constructor(private flavorRepository: IFlavorRepository) {}

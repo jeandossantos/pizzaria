@@ -1,6 +1,6 @@
 import { describe, expect, it } from '@jest/globals';
 
-import { ClientRepositoryInMemory } from '../../in-memory-database/ClientRepositoryInMemory';
+import { ClientRepositoryInMemory } from '../../../in-memory-database/ClientRepositoryInMemory';
 
 import { FindAllClientsUseCase } from './FindAllClientsUseCase';
 

@@ -1,7 +1,7 @@
-import { IFlavorRepository } from '../../interfaces/IFlavorRepository';
-import { Flavor } from '../../entities/Flavor/Flavor';
+import { IFlavorRepository } from '../../../interfaces/IFlavorRepository';
+import { Flavor } from '../../../entities/Flavor/Flavor';
 import { validate } from 'class-validator';
-import { ClassValidadorError } from '../../exceptions/ClassValidadorError';
+import { ClassValidadorError } from '../../../exceptions/ClassValidadorError';
 
 type CreateFlavorUseCaseProps = Omit<Flavor, 'id'>;
 

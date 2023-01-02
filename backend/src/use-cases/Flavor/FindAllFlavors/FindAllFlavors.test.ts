@@ -1,4 +1,4 @@
-import { FlavorRepositoryInMemory } from '../../in-memory-database/FlavorRepositoryInMemory';
+import { FlavorRepositoryInMemory } from '../../../in-memory-database/FlavorRepositoryInMemory';
 import { describe, expect, it } from '@jest/globals';
 import { FindAllFlavors } from './FindAllFlavors';
 
