@@ -1,3 +1,5 @@
+import { ClassValidadorError } from './../../exceptions/ClassValidadorError';
+import { validate } from 'class-validator';
 import { Address } from '../../entities/Address/Address';
 import { Client } from '../../entities/Client/Client';
 import { IClientRepository } from '../../interfaces/IClientRepository';
@@ -15,6 +17,12 @@ export class CreateClientUseCase {
         ...address,
       }),
     });
+
+    const errors = await validate(client);
+
+    if (errors.length > 0) {
+      throw new ClassValidadorError(errors);
+    }
 
     const newClient = await this.clientRepository.create(client);
 
