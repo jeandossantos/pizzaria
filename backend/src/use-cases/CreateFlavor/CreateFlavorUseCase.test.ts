@@ -17,4 +17,16 @@ describe('Create Flavor', () => {
 
     expect(flavor).toHaveProperty('id');
   });
+
+  it('should not create a flavor', async () => {
+    const createFlavorUseCase = new CreateFlavorUseCase(flavorRepository);
+
+    const result = createFlavorUseCase.execute({
+      name: '',
+      price: 150.0,
+      size: 'pequena',
+    });
+
+    expect(result).rejects.toThrow();
+  });
 });
